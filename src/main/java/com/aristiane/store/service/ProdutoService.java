@@ -1,5 +1,7 @@
 package com.aristiane.store.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,12 @@ public class ProdutoService {
 		this.repository.save(produto);
 		
 		return produto;
+	}
+
+	public List<Produto> findAll() {
+	
+		List<Produto> produtos = this.repository.findAll();
+		
+		return produtos;
 	}
 }
