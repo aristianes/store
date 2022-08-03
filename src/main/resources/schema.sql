@@ -1,0 +1,8 @@
+CREATE TABLE PRODUTO (
+    PRODUTO_ID int,
+    NOME_PRODUTO varchar(255),
+    MARCA_PRODUTO varchar(255),
+	QUANTIDADE_PRODUTO int,
+	PRECO_PRODUTO int
+	);
+	
