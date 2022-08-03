@@ -26,4 +26,10 @@ public class ProdutoService {
 		
 		return produtos;
 	}
+
+	public void delete(long id) {
+	
+		this.repository.deleteById(id);
+		
+	}
 }
