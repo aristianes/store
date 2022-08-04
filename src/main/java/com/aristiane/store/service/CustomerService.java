@@ -27,4 +27,8 @@ public class CustomerService {
 
 	}
 
+	public void delete(long id) {
+		this.repository.deleteById(id);
+
+	}
 }
