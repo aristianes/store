@@ -27,4 +27,9 @@ public class FuncionarioService {
 
 	}
 
+	public void delete(long id) {
+		this.repository.deleteById(id);
+
+	}
+
 }
