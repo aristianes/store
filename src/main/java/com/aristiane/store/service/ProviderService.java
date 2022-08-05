@@ -1,5 +1,7 @@
 package com.aristiane.store.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,13 @@ public class ProviderService {
 		this.repository.save(provider);
 
 		return provider;
+	}
+
+	public List<Provider> findAll() {
+		List<Provider> providers = this.repository.findAll();
+
+		return providers;
+
 	}
 
 }

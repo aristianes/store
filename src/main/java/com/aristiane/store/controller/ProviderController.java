@@ -1,11 +1,15 @@
 package com.aristiane.store.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aristiane.store.model.Produto;
 import com.aristiane.store.model.Provider;
 import com.aristiane.store.service.ProviderService;
 
@@ -21,6 +25,10 @@ public class ProviderController {
 		return this.service.save(provider);
 		
 	}
-  
+  @GetMapping
+  public List<Provider> findAll() {
+      return service.findAll();
+      
+	}
 	
 }
