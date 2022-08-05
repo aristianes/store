@@ -20,25 +20,25 @@ public class ProdutoController {
 
 	@Autowired
 	private ProdutoService service;
-	
+
 	@PostMapping
-	public Produto save( @RequestBody Produto produto){
+	public Produto save(@RequestBody Produto produto) {
 		this.service.save(produto);
-		
+
 		return produto;
-		
+
 	}
-	
+
 	@GetMapping
 	public List<Produto> findAll() {
-        return service.findAll();
-        
+		return service.findAll();
+
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public void delete (@PathVariable long id){
-			
+	public void delete(@PathVariable long id) {
+
 		this.service.delete(id);
-		
+
 	}
 }

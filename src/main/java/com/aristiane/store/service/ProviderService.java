@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.aristiane.store.model.Provider;
 import com.aristiane.store.repository.ProviderRepository;
 
-
 @Service
 public class ProviderService {
 
@@ -26,6 +25,11 @@ public class ProviderService {
 		List<Provider> providers = this.repository.findAll();
 
 		return providers;
+
+	}
+
+	public void delete(long id) {
+		this.repository.deleteById(id);
 
 	}
 

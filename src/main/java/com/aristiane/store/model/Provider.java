@@ -10,12 +10,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "PROVIDER")
 public class Provider {
-	
+
 	@Id
 	@Column(name = "PROVIDER_ID")
-	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -72,25 +72,22 @@ public class Provider {
 		this.district = district;
 	}
 
-	@Column(name = "NAME_PROVIDER") 
+	@Column(name = "NAME_PROVIDER")
 	private String name;
-	
-	@Column(name = "EMAIL_PROVIDER") 
+
+	@Column(name = "EMAIL_PROVIDER")
 	private String email;
-	
-	@Column(name = "DOCUMENT_PROVIDER") 
+
+	@Column(name = "DOCUMENT_PROVIDER")
 	private String document;
-	
-	@Column(name = "PHONE_PROVIDER") 
+
+	@Column(name = "PHONE_PROVIDER")
 	private String phone;
-	
-	@Column(name = "ADDRESS_PROVIDER") 
+
+	@Column(name = "ADDRESS_PROVIDER")
 	private String address;
-	
-	@Column(name = "DISTRICT_PROVIDER") 
+
+	@Column(name = "DISTRICT_PROVIDER")
 	private String district;
-	
-	
-	
 
 }
