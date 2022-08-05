@@ -11,26 +11,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aristiane.store.model.Produto;
-import com.aristiane.store.service.ProdutoService;
+import com.aristiane.store.model.Provider;
+import com.aristiane.store.service.ProviderService;
 
 @RestController
-@RequestMapping("/produto")
-public class ProdutoController {
+@RequestMapping("/provider")
+public class ProviderController {
 
 	@Autowired
-	private ProdutoService service;
+	private ProviderService service;
 
 	@PostMapping
-	public Produto save(@RequestBody Produto produto) {
-		this.service.save(produto);
-
-		return produto;
+	public Provider save(@RequestBody Provider provider) {
+		return this.service.save(provider);
 
 	}
 
 	@GetMapping
-	public List<Produto> findAll() {
+	public List<Provider> findAll() {
 		return service.findAll();
 
 	}
@@ -41,4 +39,5 @@ public class ProdutoController {
 		this.service.delete(id);
 
 	}
+
 }
